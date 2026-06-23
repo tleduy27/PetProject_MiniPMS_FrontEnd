@@ -35,6 +35,11 @@ const router = createRouter({
       component: () => import('@/views/room-types/RoomTypeListView.vue'),
     },
     {
+      path: '/rooms',
+      name: 'room-list',
+      component: () => import('@/views/rooms/RoomListView.vue'),
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: 'not-found',
       component: () => import('@/views/NotFoundView.vue'),
