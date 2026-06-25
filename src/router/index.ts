@@ -40,6 +40,16 @@ const router = createRouter({
       component: () => import('@/views/rooms/RoomListView.vue'),
     },
     {
+      path: '/rate-plans',
+      name: 'rate-plan-list',
+      component: () => import('@/views/rate-plans/RatePlanListView.vue'),
+    },
+    {
+      path: '/room-rates',
+      name: 'room-rate-list',
+      component: () => import('@/views/room-rates/RoomRateListView.vue'),
+    },
+    {
       path: '/:pathMatch(.*)*',
       name: 'not-found',
       component: () => import('@/views/NotFoundView.vue'),

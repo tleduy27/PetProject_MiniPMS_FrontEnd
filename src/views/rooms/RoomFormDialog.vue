@@ -85,8 +85,8 @@ async function onSubmit() {
       roomNumber: form.roomNumber,
       floor: form.floor,
       roomTypeId: form.roomTypeId!,
-      status: form.status,
-      housekeepingStatus: form.housekeepingStatus,
+      status: form.status as RoomStatus,
+      housekeepingStatus: form.housekeepingStatus as HousekeepingStatus,
       notes: form.notes || null,
     }
 

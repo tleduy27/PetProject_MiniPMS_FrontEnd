@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { useRoute } from 'vue-router'
-import { User, OfficeBuilding, House } from '@element-plus/icons-vue'
+import { User, OfficeBuilding, House, Tickets, Money } from '@element-plus/icons-vue'
 
 const route = useRoute()
 </script>
@@ -28,6 +28,14 @@ const route = useRoute()
         <el-menu-item index="/rooms">
           <el-icon><House /></el-icon>
           <span>Phòng (Rooms)</span>
+        </el-menu-item>
+        <el-menu-item index="/rate-plans">
+          <el-icon><Tickets /></el-icon>
+          <span>Gói giá (Rate Plans)</span>
+        </el-menu-item>
+        <el-menu-item index="/room-rates">
+          <el-icon><Money /></el-icon>
+          <span>Giá theo ngày (Room Rates)</span>
         </el-menu-item>
       </el-menu>
     </el-aside>

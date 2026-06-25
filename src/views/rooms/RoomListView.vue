@@ -126,7 +126,7 @@ onMounted(fetchRooms)
       <el-table-column prop="roomTypeName" label="Loại phòng" min-width="140" />
 
       <el-table-column label="Trạng thái" min-width="180">
-        <template #default="{ row }">
+        <template #default="{ row }: { row: RoomDto }">
           <el-dropdown trigger="click" @command="(cmd: RoomStatus) => onChangeStatus(row, cmd)">
             <el-tag :type="ROOM_STATUS_META[row.status].tag" style="cursor: pointer">
               {{ ROOM_STATUS_META[row.status].label }}
@@ -148,7 +148,7 @@ onMounted(fetchRooms)
       </el-table-column>
 
       <el-table-column label="Buồng phòng" min-width="150">
-        <template #default="{ row }">
+        <template #default="{ row }: { row: RoomDto }">
           <el-tag :type="HOUSEKEEPING_STATUS_META[row.housekeepingStatus].tag">
             {{ HOUSEKEEPING_STATUS_META[row.housekeepingStatus].label }}
           </el-tag>
